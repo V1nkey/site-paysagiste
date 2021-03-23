@@ -6,10 +6,10 @@ export const HeaderMenu: React.FC = () => (
     <HeaderBackground>Adrien Albino</HeaderBackground>
     <Navbar
       liens={[
-        { titre: "Particuliers", url: "/" },
-        { titre: "Professionnels", url: "/" },
-        { titre: "Tarifs", url: "/" },
-        { titre: "Contact", url: "/" },
+        { titre: "Particuliers", url: "/particuliers" },
+        { titre: "Professionnels", url: "/professionnels" },
+        { titre: "Tarifs", url: "/tarifs" },
+        { titre: "Contact", url: "/contact" },
       ]}
     />
   </>

@@ -1,9 +1,9 @@
 import React from "react";
-import { PageContent } from "../../ui/Page/PageContent";
-import { PageSection } from "../../ui/Page/PageSection";
-import { AppMain } from "../App/AppMain";
+import { AppMain } from "../../src/components/App/AppMain";
+import { PageContent } from "../../src/ui/Page/PageContent";
+import { PageSection } from "../../src/ui/Page/PageSection";
 
-export const Accueil: React.FC = () => (
+const Professionnels: React.FC = () => (
   <AppMain>
     <PageContent>
       <PageSection>
@@ -60,3 +60,5 @@ export const Accueil: React.FC = () => (
     </PageContent>
   </AppMain>
 );
+
+export default Professionnels;

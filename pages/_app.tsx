@@ -2,6 +2,7 @@ import "reset.css/reset.css";
 import "../styles/globals.css";
 
 import React from "react";
+import { HeaderMenu } from "../src/components/HeaderMenu/HeaderMenu";
 
 const SitePaysagiste: React.FC<any> = ({ Component, pageProps }) => (
   <>
@@ -31,6 +32,7 @@ const SitePaysagiste: React.FC<any> = ({ Component, pageProps }) => (
         margin-right: auto;
       }
     `}</style>
+    <HeaderMenu />
     <Component {...pageProps} />
   </>
 );
