@@ -28,7 +28,7 @@ export const HeaderMenu: React.FC = () => {
       // Remove event listener on cleanup
       return () => window.removeEventListener("resize", handleResize);
     }
-  });
+  }, []);
 
   return (
     <>
