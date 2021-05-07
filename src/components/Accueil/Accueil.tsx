@@ -1,6 +1,7 @@
 import React from "react";
 
 import { AppMain } from "../App/AppMain";
+
 import { PageContentAccueil, PageSectionAccueil } from "./styles";
 
 export const Accueil: React.FC = () => (

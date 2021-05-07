@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 import { Navbar } from "../Navbar/Navbar";
+
 import { HeaderBackground } from "./styles";
 
 export const HeaderMenu: React.FC = () => {
@@ -29,11 +31,15 @@ export const HeaderMenu: React.FC = () => {
       // Remove event listener on cleanup
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, []);
+  }, [windowWidth]);
 
   return (
     <>
-      <HeaderBackground><Link href="/"><a>OJEORJER</a></Link></HeaderBackground>
+      <HeaderBackground>
+        <Link href="/">
+          <a>OJEORJER</a>
+        </Link>
+      </HeaderBackground>
       {isDesktop() ? <Navbar liens={liens} /> : <BurgerMenu liens={liens} />}
     </>
   );

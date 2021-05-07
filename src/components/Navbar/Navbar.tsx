@@ -1,6 +1,7 @@
-import React from "react";
-import { NavbarLayout } from "./styles";
 import Link from "next/link";
+import React from "react";
+
+import { NavbarLayout } from "./styles";
 
 interface NavbarProps {
   liens: Array<{ titre: string; url: string }>;
