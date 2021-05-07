@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { BurgerMenu } from "../BurgerMenu/BurgerMenu";
 import { Navbar } from "../Navbar/Navbar";
@@ -32,7 +33,7 @@ export const HeaderMenu: React.FC = () => {
 
   return (
     <>
-      <HeaderBackground>Adrien Albino</HeaderBackground>
+      <HeaderBackground><Link href="/"><a>OJEORJER</a></Link></HeaderBackground>
       {isDesktop() ? <Navbar liens={liens} /> : <BurgerMenu liens={liens} />}
     </>
   );

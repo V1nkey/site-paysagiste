@@ -1,35 +1,31 @@
 import "reset.css/reset.css";
-import "../styles/globals.css";
+// import "../styles/globals.css";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
 import React from "react";
 import { HeaderMenu } from "../src/components/HeaderMenu/HeaderMenu";
+
+// Prevent fontawesome from adding its CSS since we did it manually above:
+config.autoAddCss = false;
 
 const SitePaysagiste: React.FC<any> = ({ Component, pageProps }) => (
   <>
     <style global jsx>{`
       html {
         font-size: 62.5%;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
       }
 
       body {
-        max-width: 1200px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        
         font-size: 1.4rem;
         line-height: 1.32;
-        background-color: lightblue};
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
-
-      body > * {
-        max-width: 1200px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+      
+      * {
+       box-sizing: border-box;
       }
     `}</style>
     <HeaderMenu />

@@ -5,6 +5,6 @@ export const PageContent = styled.div`
   padding: 2rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
 `;

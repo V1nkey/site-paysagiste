@@ -16,4 +16,9 @@ export const NavbarLayout = styled.ul`
   li + li {
     margin-left: 1rem;
   }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
 `;

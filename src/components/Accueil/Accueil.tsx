@@ -1,12 +1,12 @@
 import React from "react";
-import { PageContent } from "../../ui/Page/PageContent";
-import { PageSection } from "../../ui/Page/PageSection";
+
 import { AppMain } from "../App/AppMain";
+import { PageContentAccueil, PageSectionAccueil } from "./styles";
 
 export const Accueil: React.FC = () => (
   <AppMain>
-    <PageContent>
-      <PageSection>
+    <PageContentAccueil>
+      <PageSectionAccueil>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere,
         ipsum sit amet vehicula fermentum, eros ex iaculis leo, eu pretium justo
         augue eget nisl. Donec iaculis turpis a vehicula rutrum. Nunc aliquam in
@@ -14,8 +14,8 @@ export const Accueil: React.FC = () => (
         quam. Nullam eu nisi risus. Vestibulum dapibus nisi et dapibus pretium.
         Maecenas vitae dignissim quam, in sagittis nunc. Interdum et malesuada
         fames ac ante ipsum primis in faucibus.
-      </PageSection>
-      <PageSection>
+      </PageSectionAccueil>
+      <PageSectionAccueil>
         Praesent sodales quam augue, nec pretium nisl cursus sit amet.
         Suspendisse in arcu at nisl blandit suscipit a in ligula. Nullam
         fermentum odio a augue vulputate, in sagittis tortor commodo. Duis
@@ -27,16 +27,16 @@ export const Accueil: React.FC = () => (
         risus, ac rutrum lorem placerat sed. Pellentesque venenatis mi at tempor
         blandit. Vestibulum ante ipsum primis in faucibus orci luctus et
         ultrices posuere cubilia curae;
-      </PageSection>
-      <PageSection>
+      </PageSectionAccueil>
+      <PageSectionAccueil>
         In venenatis nunc nisi, vitae interdum neque facilisis et. In sagittis
         eu odio vel fermentum. Praesent a vehicula nisl. Curabitur finibus
         tempor purus, eu efficitur eros dapibus id. Sed non elit ac augue
         pharetra vulputate. Nam sagittis finibus scelerisque. Maecenas id mauris
         a massa condimentum mattis. Duis volutpat laoreet justo eu feugiat.
         Donec id sem eu elit tempus aliquet. Sed varius varius libero.
-      </PageSection>
-      <PageSection>
+      </PageSectionAccueil>
+      <PageSectionAccueil>
         Aenean et lorem fringilla, semper arcu non, tincidunt diam. In ante
         enim, sollicitudin non aliquet ut, varius pharetra felis. Aenean
         tincidunt erat at turpis ultricies molestie. Nulla sagittis interdum
@@ -48,15 +48,15 @@ export const Accueil: React.FC = () => (
         Mauris quis rhoncus orci, quis ultricies diam. Nulla vehicula
         consectetur mauris pellentesque euismod. Curabitur sit amet velit urna.
         Morbi eget lacinia ante. Nulla rhoncus sapien ut hendrerit sollicitudin.
-      </PageSection>
-      <PageSection>
+      </PageSectionAccueil>
+      <PageSectionAccueil>
         Aenean ut massa nisl. Suspendisse lobortis ullamcorper risus vitae
         lobortis. Phasellus finibus pulvinar sapien. In imperdiet ex nisi, nec
         aliquam metus ultrices eget. Curabitur leo nibh, ullamcorper sed ligula
         quis, elementum consectetur eros. Donec condimentum id nisi in blandit.
         Nulla facilisi. Morbi rutrum dapibus nibh at porttitor. Maecenas non
         ante hendrerit ipsum feugiat semper a in ligula.
-      </PageSection>
-    </PageContent>
+      </PageSectionAccueil>
+    </PageContentAccueil>
   </AppMain>
 );
