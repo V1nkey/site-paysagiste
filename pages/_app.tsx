@@ -1,17 +1,18 @@
 import "reset.css/reset.css";
-// import "../styles/globals.css";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 
+import { Footer } from "../src/components/Footer/Footer";
 import { HeaderMenu } from "../src/components/HeaderMenu/HeaderMenu";
+import { PageLayout } from "../src/ui/Page/PageLayout";
 
 // Prevent fontawesome from adding its CSS since we did it manually above:
 config.autoAddCss = false;
 
 const SitePaysagiste: React.FC<any> = ({ Component, pageProps }) => (
-  <>
+  <PageLayout>
     <style global jsx>{`
       html {
         font-size: 62.5%;
@@ -30,7 +31,8 @@ const SitePaysagiste: React.FC<any> = ({ Component, pageProps }) => (
     `}</style>
     <HeaderMenu />
     <Component {...pageProps} />
-  </>
+    <Footer />
+  </PageLayout>
 );
 
 export default SitePaysagiste;

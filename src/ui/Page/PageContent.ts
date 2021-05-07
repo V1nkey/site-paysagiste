@@ -7,4 +7,5 @@ export const PageContent = styled.div`
   margin-right: auto;
   max-width: 1300px;
   width: 100%;
+  background-color: lightskyblue;
 `;
