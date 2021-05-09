@@ -2,25 +2,31 @@ import styled from "styled-components";
 
 export const BurgerButton = styled.button``;
 
-export const BurgerMenuLayout = styled.ul`
+export const BurgerMenuLayout = styled.nav`
   display: flex;
-  padding: 1rem;
-
-  background-color: black;
-  color: white;
-  text-transform: uppercase;
-
-  li {
-    display: flex;
-    align-items: center;
-  }
-
-  li + li {
-    margin-left: 1rem;
-  }
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: #0d0c1d;
+  text-align: left;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
 
   a {
-    color: white;
+    color: white !important;
     text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    transition: color 0.3s linear;
+  }
+
+  svg {
+    color: white;
   }
 `;

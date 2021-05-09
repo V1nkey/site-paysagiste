@@ -1,4 +1,4 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -22,12 +22,16 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ liens }) => {
       />
       {isOpen && (
         <BurgerMenuLayout>
+          <FontAwesomeIcon
+            icon={faTimes}
+            aria-hidden="true"
+            size="2x"
+            onClick={() => setOpen(!isOpen)}
+          />
           {liens.map((lien) => (
-            <li key={lien.url}>
-              <Link href={lien.url}>
-                <a>{lien.titre}</a>
-              </Link>
-            </li>
+            <Link href={lien.url}>
+              <a>{lien.titre}</a>
+            </Link>
           ))}
         </BurgerMenuLayout>
       )}

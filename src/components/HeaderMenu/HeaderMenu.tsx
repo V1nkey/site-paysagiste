@@ -39,8 +39,9 @@ export const HeaderMenu: React.FC = () => {
         <Link href="/">
           <a>OJEORJER</a>
         </Link>
+        {!isDesktop() && <BurgerMenu liens={liens} />}
       </HeaderBackground>
-      {isDesktop() ? <Navbar liens={liens} /> : <BurgerMenu liens={liens} />}
+      {isDesktop() && <Navbar liens={liens} />}
     </>
   );
 };
