@@ -8,6 +8,6 @@ export const FooterLayout = styled.footer.attrs({ role: "contentinfo" })`
   padding: 2rem;
 
   font-size: 1.2rem;
-  
+
   background-color: palevioletred;
 `;

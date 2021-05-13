@@ -29,7 +29,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ liens }) => {
             onClick={() => setOpen(!isOpen)}
           />
           {liens.map((lien) => (
-            <Link href={lien.url}>
+            <Link key={lien.url} href={lien.url}>
               <a>{lien.titre}</a>
             </Link>
           ))}
