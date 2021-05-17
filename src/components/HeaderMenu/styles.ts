@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
-export const HeaderBackground = styled.header.attrs({ role: "banner" })`
+interface HeaderBackgroundProps {
+  isDesktop: boolean;
+}
+
+export const HeaderBackground = styled.header.attrs({
+  role: "banner",
+})<HeaderBackgroundProps>`
   background-color: lightgreen;
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => (props.isDesktop ? "center" : "space-between")};
   padding: 2rem 1rem;
 
   a {

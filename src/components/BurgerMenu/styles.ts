@@ -25,8 +25,4 @@ export const BurgerMenuLayout = styled.nav`
     letter-spacing: 0.5rem;
     transition: color 0.3s linear;
   }
-
-  svg {
-    color: white;
-  }
 `;

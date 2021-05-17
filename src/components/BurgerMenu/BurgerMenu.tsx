@@ -1,7 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { BurgerMenuLayout } from "./styles";
 
@@ -11,23 +11,35 @@ interface BurgerMenuProps {
 
 export const BurgerMenu: React.FC<BurgerMenuProps> = ({ liens }) => {
   const [isOpen, setOpen] = useState(false);
+  const node = useRef();
+
+  const useOnClickOutside = (ref: any, handler: any) => {
+    useEffect(() => {
+      const listener = (event: any) => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+        handler(event);
+      };
+      document.addEventListener("mousedown", listener);
+      return () => {
+        document.removeEventListener("mousedown", listener);
+      };
+    }, [ref, handler]);
+  };
+
+  useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <>
+    <div ref={node}>
       <FontAwesomeIcon
-        icon={faBars}
+        icon={isOpen ? faTimes : faBars}
         aria-hidden="true"
         size="2x"
         onClick={() => setOpen(!isOpen)}
       />
       {isOpen && (
         <BurgerMenuLayout>
-          <FontAwesomeIcon
-            icon={faTimes}
-            aria-hidden="true"
-            size="2x"
-            onClick={() => setOpen(!isOpen)}
-          />
           {liens.map((lien) => (
             <Link key={lien.url} href={lien.url}>
               <a>{lien.titre}</a>
@@ -35,6 +47,6 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ liens }) => {
           ))}
         </BurgerMenuLayout>
       )}
-    </>
+    </div>
   );
 };

@@ -8,9 +8,10 @@ import { HeaderBackground } from "./styles";
 
 export const HeaderMenu: React.FC = () => {
   const liens = [
+    { titre: "Accueil", url: "/" },
+    { titre: "Réalisations", url: "/realisations" },
     { titre: "Particuliers", url: "/particuliers" },
     { titre: "Professionnels", url: "/professionnels" },
-    { titre: "Tarifs", url: "/tarifs" },
     { titre: "Contact", url: "/contact" },
   ];
 
@@ -35,7 +36,7 @@ export const HeaderMenu: React.FC = () => {
 
   return (
     <>
-      <HeaderBackground>
+      <HeaderBackground isDesktop={isDesktop()}>
         <Link href="/">
           <a>Adrien Albino - Paysagiste</a>
         </Link>
