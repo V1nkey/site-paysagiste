@@ -1,8 +1,12 @@
 import React from "react";
 
 import { AppMain } from "../../src/components/App/AppMain";
+import { Alert } from "../../src/ui/Alert/Alert";
 import { PageContent } from "../../src/ui/Page/PageContent";
 import { PageSection } from "../../src/ui/Page/PageSection";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { VStack } from "../../src/ui/Stack/VStack";
+import { Prestations } from "../../src/components/Prestations/Prestations";
 
 const Particuliers: React.FC = () => (
   <AppMain>
@@ -51,13 +55,13 @@ const Particuliers: React.FC = () => (
         Morbi eget lacinia ante. Nulla rhoncus sapien ut hendrerit sollicitudin.
       </PageSection>
       <PageSection>
-        Aenean ut massa nisl. Suspendisse lobortis ullamcorper risus vitae
-        lobortis. Phasellus finibus pulvinar sapien. In imperdiet ex nisi, nec
-        aliquam metus ultrices eget. Curabitur leo nibh, ullamcorper sed ligula
-        quis, elementum consectetur eros. Donec condimentum id nisi in blandit.
-        Nulla facilisi. Morbi rutrum dapibus nibh at porttitor. Maecenas non
-        ante hendrerit ipsum feugiat semper a in ligula.
+        <Prestations />
       </PageSection>
+      <Alert
+        type="info"
+        icon={faExclamationTriangle}
+        title={<span>Prix différents selon la prestation</span>}
+      />
     </PageContent>
   </AppMain>
 );

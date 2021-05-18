@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const BurgerButton = styled.button``;
-
 export const BurgerMenuLayout = styled.nav`
   display: flex;
   flex-direction: column;
