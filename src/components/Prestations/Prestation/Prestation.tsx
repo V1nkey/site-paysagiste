@@ -1,15 +1,15 @@
 import React from "react";
-import { PrestationFooter, PrestationHeader } from "./styles";
+import { Card } from "../../../ui/Card/Card";
 
 interface PrestationProps {
   titre: string;
 }
 export const Prestation: React.FC<PrestationProps> = ({ titre, children }) => (
-  <>
-    <PrestationHeader>{titre}</PrestationHeader>
+  <Card>
+    <header>{titre}</header>
     {children}
-    <PrestationFooter>
+    <footer>
       Pour plus d'informations sur la prestation ou les tarifs, contactez-moi
-    </PrestationFooter>
-  </>
+    </footer>
+  </Card>
 );
