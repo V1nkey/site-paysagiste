@@ -5,7 +5,7 @@ interface PrestationProps {
   titre: string;
 }
 export const Prestation: React.FC<PrestationProps> = ({ titre, children }) => (
-  <Card>
+  <Card as="li">
     <header>{titre}</header>
     {children}
     <footer>

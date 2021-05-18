@@ -5,7 +5,6 @@ import { Alert } from "../../src/ui/Alert/Alert";
 import { PageContent } from "../../src/ui/Page/PageContent";
 import { PageSection } from "../../src/ui/Page/PageSection";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-import { VStack } from "../../src/ui/Stack/VStack";
 import { Prestations } from "../../src/components/Prestations/Prestations";
 
 const Particuliers: React.FC = () => (
