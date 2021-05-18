@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography } from "../../ui/Typography/Typography";
 import { ImageLayout, ImagesRealisationLayout } from "./styles";
 
 interface Image {
@@ -22,7 +23,7 @@ export const Realisation: React.FC<RealisationProps> = ({
   plan,
 }) => (
   <>
-    <h1>{titre}</h1>
+    <Typography.Headline2 as="h1">{titre}</Typography.Headline2>
     <p>{description}</p>
     <ImagesRealisationLayout>
       <ImageLayout src={avant.src} alt={avant.alt} />
