@@ -8,13 +8,15 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ liens }) => (
-  <NavbarLayout>
-    {liens.map((lien) => (
-      <li key={lien.url}>
-        <Link href={lien.url}>
-          <a>{lien.titre}</a>
-        </Link>
-      </li>
-    ))}
-  </NavbarLayout>
+  <nav>
+    <NavbarLayout>
+      {liens.map((lien) => (
+        <li key={lien.url}>
+          <Link href={lien.url}>
+            <a>{lien.titre}</a>
+          </Link>
+        </li>
+      ))}
+    </NavbarLayout>
+  </nav>
 );
